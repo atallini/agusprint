@@ -1,0 +1,124 @@
+-gallery_images = ["galeria_1.jpg","galeria_2.jpg","galeria_3.jpg","galeria_4.jpg","galeria_5.jpg","galeria_6.jpg"]
+!!!5
+%html{class:"no-js", lang:""}
+  %head
+    %meta{charset:"utf-8"}
+    %meta{:"http-equiv" => "x-ua-compatible", content:"ie=edge"}
+    %title Papelería Diseñarte
+    %meta{name:"description", content:"Come rico y barato en el mejor rastaurante de la ciudad, servicio de primera. Los mejores tacos de la ciudad."}
+    %meta{content:"#{gallery_images.length}", :"data-name" => "image_counter"}
+    %meta{name:"viewport", content:"width=device-width, initial-scale=1"}
+    %link{rel:"apple-touch-icon", href:"apple-touch-icon.png"}
+    %link{rel:"stylesheet", href:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"}
+    %link{rel:"stylesheet", href:"css/normalize.css"}
+    %link{rel:"stylesheet", href:"css/main.css"}
+    %link{href:'https://fonts.googleapis.com/css?family=Dancing+Script', rel:'stylesheet', type:'text/css'}
+    %link{href:"https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css", rel:"stylesheet"}
+    %script{src:"js/vendor/modernizr-2.8.3.min.js"}
+  %body
+    ="<!--[if lt IE 8]>"
+    %p{class:"browserupgrade"}
+      Estás usando un navegador
+      %strong desactualizado.
+      Por favor
+      %a{href:"http://browsehappy.com/"}
+        actualiza tu navegador
+      para una mejor experiencia
+    ="<![endif]-->"
+
+    .video-container
+      / Width and height attrs are ok on media and images
+      %video{autoplay:true, width:"1280", height:"720",poster:"/videos/images/agusportada.jpg",loop:true}
+        %source{type:"video/mp4",src:"/videos/mp4/agusportada.mp4"}
+        %source{type:"video/webm",src:"/videos/webm/agusportada.webm"}
+
+    .row.middle-xs.full-height.center-xs.up.relative
+      -menu = ["Inicio","Menú","Galería","Contacto","Cómo llegar"]
+      %nav.fixed.right.top.up.main-nav#navigation
+        %ul.list-inline
+          -menu.each do |item|
+            %li
+              %a.medium= item
+      .col-xs-12
+        .box.main-content
+          %img{src:"/imgs/logo.png", alt:"Logo Restaurante Facilito", width:200, height:145}
+          %h1.white-text.title.lobster.no-margin Papelería Diseñarte
+          %p#is_open.white-text.slim.top-space
+            %span.glyphicon.glyphicon-time
+            %span.text Hace tu pedido ahora
+      .absolute.medium.black.large-padding.up--2#description
+        .row
+          .col-xs-8.col-sm-6.moto.white-text Los mejores diseños de arte
+          .fade.col-sm-6.navigation.col-xs-4
+            %nav.small.text-right.main-nav#responsive-nav
+              %span.glyphicon.glyphicon-menu-hamburger.menu.white-text.subtitle
+              %ul.list-inline
+                -menu.each do |item|
+                  %li
+                    %a.white-text= item
+    .text-center.relative#menu
+      .absolute.up#menu-title
+        %h2.lobster.title Productos
+      -menu = [{title: "Producto 1", pricing: "10.00",image:"galeria_1"},{title: "Producto 2", pricing: "50.00",image:"galeria_2"},{title: "Producto 3", pricing: "20.00",image:"galeria_3"},{title: "Producto 4", pricing: "30.00",image:"galeria_4"},{title: "Producto 5", pricing: "15.00",image:"galeria_5"},{title: "Producto 6", pricing: "10.00",image:"galeria_6"},{title: "Producto 7", pricing: "10.00",image:"galeria_7"},{title: "Producto 8", pricing: "20.00",image:"galeria_8"}]
+      .row
+        -menu.each do |alimento|
+          .col-md-4.col-lg-3.col-sm-6.col-xs-12.food{style:"background-image:url(/imgs/galeria/#{alimento[:image]}.jpg)"}
+            .screen
+              .row.full-height.middle-xs
+                .col-xs-12
+                  .box
+                    %h3.lobster.white-text.subtitle= alimento[:title]
+    #gallery
+      .inner
+        -gallery_images.each do |image|
+          .image{style:"background-image:url(/imgs/galeria/#{image})"}
+    .container
+      .card.white.relative.black-text.text-center
+        %h3.medium.slim
+          En 
+          %strong.medium.lobster Papelería Diseñarte
+          lo que hacemos no es un trabajo, es un  
+          %strong.lobster.medium arte.
+        %p.text-justify.top-space--2 
+          You do know, you do know that they don’t want you to have lunch. I’m keeping it real with you, so what you going do is have lunch. I’m giving you cloth talk, cloth. Special cloth alert, cut from a special cloth. You should never complain, complaining is a weak emotion, you got life, we breathing, we blessed. The key to more success is to get a massage once a week, very important, major key, cloth talk. Egg whites, turkey sausage, wheat toast, water. Of course they don’t want us to eat our breakfast, so we are going to enjoy our breakfast. -
+          %strong.lobster.medium Coco - Chef
+          .large-paddin.medium.black.text-center.white-text
+            También puedes acceder a este sitio sin conexión a internet
+
+
+    .top-space--2.black.big-padding.white-text.full-height#contact
+      .row.middle-xs.full-height
+        .col-xs-12
+          .box
+            %form.step-form#my-form{action:"https://formspree.io/tallini.agustina@gmail.com",method:"POST"}
+              .row.center-xs
+                .col-xs-12
+                  .box
+                    %p.subtitle Hace tu pedido por correo
+                    %p Te respondemos el email dentro de los 30 minutos
+                .col-xs-2.col-md-1.text-right
+                  .box
+                    -3.times do |i|
+                      .path-step{class:"#{'active' if i == 0}",data:{position:i+1}}
+                .col-md-5
+                  .box
+                    .fieldset.step.active
+                      %input.input{type:"email",name:"email",placeholder:"Coloca tu correo electrónico",required:true}
+                    .fieldset.step
+                      %input.input{type:"text",name:"name",placeholder:"Cuál es tu nombre?",required:true}
+                    .fieldset.step
+                      %textarea.input{name:"body",placeholder:"En qué podemos ayudarte?",required:true}
+                      %p.small#info.text-left
+
+
+
+    %script{src:"https://code.jquery.com/jquery-1.12.0.min.js"}
+    %script
+      window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')
+    %script{src:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"}
+    %script{src:"https://maps.googleapis.com/maps/api/js?key=AIzaSyAZw-hILO285jF31gCS_fzjU3e1pWE4etw&libraries=places"}
+    %script{src:"dist/user_location.js"}
+    %script{src:"dist/maps.js"}
+    %script{src:"dist/path.js"}
+    %script{src:"dist/main.js"}
+    
