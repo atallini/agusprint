@@ -59,7 +59,7 @@
     .text-center.relative#menu
       .absolute.up#menu-title
         %h2.lobster.title Menú
-      -menu = [{title: "Club Sandwich", pricing: "10.00",image:"club-sandwich"},{title: "Combo hamburguesa", pricing: "50.00",image:"combo"},{title: "Hamburguesa", pricing: "20.00",image:"hamburger"},{title: "Hot cakes", pricing: "30.00",image:"hot-cakes"},{title: "Panini", pricing: "15.00",image:"panini"},{title: "Papas", pricing: "10.00",image:"papas"},{title: "Club Sandwich", pricing: "10.00",image:"club-sandwich"},{title: "Hamburguesa", pricing: "20.00",image:"hamburger"}]
+      -menu = [{title: "Producto 1", pricing: "10.00",image:"galeria_1"},{title: "Producto 2", pricing: "50.00",image:"galeria_2"},{title: "Producto 3", pricing: "20.00",image:"galeria_3"},{title: "Producto 4", pricing: "30.00",image:"galeria_4"},{title: "Producto 5", pricing: "15.00",image:"galeria_5"},{title: "Producto 6", pricing: "10.00",image:"galeria_6"},{title: "Producto 7", pricing: "10.00",image:"galeria_7"},{title: "Producto 8", pricing: "20.00",image:"galeria_8"}]
       .row
         -menu.each do |alimento|
           .col-md-4.col-lg-3.col-sm-6.col-xs-12.food{style:"background-image:url(/imgs/food/#{alimento[:image]}-thumb.jpg)"}
