@@ -4,8 +4,8 @@
   %head
     %meta{charset:"utf-8"}
     %meta{:"http-equiv" => "x-ua-compatible", content:"ie=edge"}
-    %title La mejor comida en Restauranto
-    %meta{name:"description", content:"Come rico y barato en el mejor rastaurante de la ciudad, servicio de primera. Los mejores tacos de la ciudad."}
+    %title Papeleria Disenarte
+    %meta{name:"description", content:"Papeleria Disenarte"}
     %meta{content:"#{gallery_images.length}", :"data-name" => "image_counter"}
     %meta{name:"viewport", content:"width=device-width, initial-scale=1"}
     %link{rel:"apple-touch-icon", href:"apple-touch-icon.png"}
@@ -28,12 +28,12 @@
 
     .video-container
       / Width and height attrs are ok on media and images
-      %video{autoplay:true, width:"1280", height:"720",poster:"/videos/images/bbq.jpg",loop:true}
-        %source{type:"video/mp4",src:"/videos/mp4/bbq.mp4"}
-        %source{type:"video/webm",src:"/videos/webm/bbq.webm"}
+      %video{autoplay:true, width:"1280", height:"720",poster:"/videos/images/agusportada.jpg",loop:true}
+        %source{type:"video/mp4",src:"/videos/mp4/agusportada.mp4"}
+        %source{type:"video/webm",src:"/videos/webm/agusportada.webm"}
 
     .row.middle-xs.full-height.center-xs.up.relative
-      -menu = ["Menú","Galería","Contacto","Cómo llegar"]
+      -menu = ["Productos","Galería","Contacto","Cómo llegar"]
       %nav.fixed.right.top.up.main-nav#navigation
         %ul.list-inline
           -menu.each do |item|
@@ -42,13 +42,13 @@
       .col-xs-12
         .box.main-content
           %img{src:"/imgs/logo.png", alt:"Logo Restaurante Facilito", width:200, height:145}
-          %h1.white-text.title.lobster.no-margin Restaurante Facilito
+          %h1.white-text.title.lobster.no-margin Papeleria Disenarte
           %p#is_open.white-text.slim.top-space
             %span.glyphicon.glyphicon-time
             %span.text Abierto ahora
       .absolute.medium.black.large-padding.up--2#description
         .row
-          .col-xs-8.col-sm-6.moto.white-text Atención cálida y comida preparada por artistas
+          .col-xs-8.col-sm-6.moto.white-text Las mejores polaprints al mejor precio de baires
           .fade.col-sm-6.navigation.col-xs-4
             %nav.small.text-right.main-nav#responsive-nav
               %span.glyphicon.glyphicon-menu-hamburger.menu.white-text.subtitle
