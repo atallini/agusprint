@@ -12,6 +12,7 @@
     %link{rel:"stylesheet", href:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"}
     %link{rel:"stylesheet", href:"css/normalize.css"}
     %link{rel:"stylesheet", href:"css/main.css"}
+    %link{rel:"stylesheet", href:"css/bootstrap-social.css"}
     %link{href:'https://fonts.googleapis.com/css?family=Dancing+Script', rel:'stylesheet', type:'text/css'}
     %link{href:"https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css", rel:"stylesheet"}
     %script{src:"js/vendor/modernizr-2.8.3.min.js"}
@@ -32,13 +33,14 @@
         %source{type:"video/mp4",src:"/videos/mp4/agusportada.mp4"}
         %source{type:"video/webm",src:"/videos/webm/agusportada.webm"}
 
-    .row.middle-xs.full-height.center-xs.up.relative
-      -menu = ["Productos","Galería","Contacto","Cómo llegar"]
+    .row.middle-xs.full-height.center-xs.up.relative#inicio
+      -menu = [{title:"Inicio", link:"#inicio"}, {title:"Productos", link:"#menu"}, {title:"Galería", link:"#gallery"}, {title:"Contacto", link:"#contact"}, {title:"Cómo llegar", link:"#location"}]
       %nav.fixed.right.top.up.main-nav#navigation
         %ul.list-inline
           -menu.each do |item|
             %li
-              %a.medium= item
+              //%a.medium= item
+              %a{href:item[:link]}= item[:title]
       .col-xs-12
         .box.main-content
           %img{src:"/imgs/logo.png", alt:"Logo Restaurante Facilito", width:200, height:145}
@@ -55,19 +57,22 @@
               %ul.list-inline
                 -menu.each do |item|
                   %li
-                    %a.white-text= item
+                    //%a.white-text= item
+                    %a{href:item[:link]}= item[:title]
     .text-center.relative#menu
       .absolute.up#menu-title
         %h2.lobster.title Productos
-      -menu = [{title: "Producto 1", pricing: "10.00",image:"galeria_1"},{title: "Producto 2", pricing: "50.00",image:"galeria_2"},{title: "Producto 3", pricing: "20.00",image:"galeria_3"},{title: "Producto 4", pricing: "30.00",image:"galeria_4"},{title: "Producto 5", pricing: "15.00",image:"galeria_5"},{title: "Producto 6", pricing: "10.00",image:"galeria_6"},{title: "Producto 7", pricing: "10.00",image:"galeria_7"},{title: "Producto 8", pricing: "20.00",image:"galeria_8"}]
+      -menu = [{title: "Producto 1", comentario: "Oferta especial del dia1", pricing: "10.00",image:"galeria_1"},{title: "Producto 2", comentario: "Oferta especial del dia2", pricing: "50.00",image:"galeria_2"},{title: "Producto 3", comentario: "Oferta especial del dia3", pricing: "20.00",image:"galeria_3"},{title: "Producto 4", comentario: "Oferta especial del dia4", pricing: "30.00",image:"galeria_4"},{title: "Producto 5", comentario: "Oferta especial del dia5", pricing: "15.00",image:"galeria_5"},{title: "Producto 6", comentario: "Oferta especial del dia6", pricing: "10.00",image:"galeria_6"},{title: "Producto 7", comentario: "Oferta especial del dia7", pricing: "10.00",image:"galeria_7"},{title: "Producto 8", comentario: "Oferta especial del dia8", pricing: "20.00",image:"galeria_8"}]
       .row
         -menu.each do |alimento|
           .col-md-4.col-lg-3.col-sm-6.col-xs-12.food{style:"background-image:url(/imgs/galeria/#{alimento[:image]}.jpg)"}
             .screen
               .row.full-height.middle-xs
-                .col-xs-12
+                .col-xs-12.white-text
                   .box
-                    %h3.lobster.white-text.subtitle= alimento[:title]
+                    %h3.lobster.subtitle= alimento[:title]
+                    %p.lobster.subtitle= alimento[:comentario]
+                    %p.no-margin= alimento[:pricing] + "$"
     #gallery
       .inner
         -gallery_images.each do |image|
@@ -105,8 +110,7 @@
                       %input.input{type:"text",name:"name",placeholder:"¿Cuál es tu nombre?",required:true}
                     .fieldset.step
                       %textarea.input{name:"body",placeholder:"¿En qué podemos ayudarte?",required:true}
-                      %p.small#info.text-left
-                
+                      %p.small#info.text-left                
 
     #location
       #map
@@ -120,4 +124,28 @@
     %script{src:"dist/maps.js"}
     %script{src:"dist/path.js"}
     %script{src:"dist/main.js"}
+
+    //.row.middle-xs.center-xs.up
+    //.top-space--2.black.big-padding.white-text.full-height#contact
+    //.row.middle-xs.full-height
+    //.col-xs-12
+
+    %footer.middle-xs.center-xs.up
+      %nav
+        %ul.list-inline.top-space--2
+          %li
+            %a{:href => "#"} Instagram
+          %li
+            %a{:href => "#"} Facebook
+          %li
+            %a{:href => "#"} Pinterest
+      //%strong.medium.lobster.text-justify.top-space--2 Papelería Diseñarte Copyright Disenarte 2017 - Agustina Tallini
+      %nav
+        %ul
+          %li.medium.top-space--2
+            %strong.medium.lobster.top-space--2 Copyright Disenarte 2017 - Division Web
+        %ul 
+          %li.medium.top-space--2
+            %p.text-justify.top-space--2 Para desarrollos web personalizados, contactar a Agustina Tallini: 
+
     
