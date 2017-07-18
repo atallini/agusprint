@@ -94,6 +94,41 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.navigation-anibal-c li {
+  padding: 5px 10px;
+}
+
+.navigation-anibal-c li:hover {
+  background-color: #000;
+}
+
+.navigation-anibal-c li a {
+  color: white;
+  cursor: pointer;
+}
+
+.navigation-anibal-c li a:hover {
+  text-decoration: none;
+}
+
+.navigation-anibal a {
+  color: white;
+  cursor: pointer;
+}
+
+.navigation-anibal a:hover {
+  text-decoration: none;
+}
+
+.navigation-anibal-b {
+  color: #222;
+  cursor: pointer;
+}
+
+.navigation-anibal-b:hover {
+  text-decoration: none;
+}
+
 .sin-vineta {
   list-style: none;
 }
@@ -175,6 +210,14 @@ textarea {
   text-decoration: none;
 }
 
+.link-nav-anibal {
+  cursor: pointer;
+}
+
+.link-nav-anibal:hover {
+  text-decoration: none;
+}
+
 #description {
   width: 100%;
   transition: all 0.4s;
@@ -190,6 +233,11 @@ textarea {
 
 #description .moto {
   margin: 0 auto;
+}
+
+#description-top {
+  width: 100%;
+  transition: all 0.4s;
 }
 
 ul.list-inline {
@@ -217,6 +265,26 @@ ul.list-inline {
 }
 
 #gallery .image {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  margin-right: -4px;
+  background-size: cover;
+  background-position: center;
+}
+
+#gallery-productos {
+  overflow-x: hidden;
+}
+
+#gallery-productos .inner {
+  height: 80%;
+  white-space: nowrap;
+  transition: all 1s;
+  position: relative;
+}
+
+#gallery-productos .image {
   width: 100%;
   height: 100%;
   display: inline-block;
@@ -315,7 +383,7 @@ ul.list-inline {
   font-size: 13px;
 }
 
-.medium {
+.medium, .navigation-anibal-c li {
   font-size: 1.5em;
 }
 
@@ -383,7 +451,7 @@ ul.list-inline {
   z-index: 20;
 }
 
-.full-height, #gallery {
+.full-height, #gallery, #gallery-productos {
   min-height: 100%;
 }
 
@@ -503,7 +571,7 @@ ul.list-inline {
   #contact {
     margin-top: -100px;
   }
-  .full-height, #gallery {
+  .full-height, #gallery, #gallery-productos {
     height: 100%;
   }
   #gallery .inner {

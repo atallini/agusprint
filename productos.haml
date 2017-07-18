@@ -1,0 +1,77 @@
+-menu = [{title:"Inicio", link:"#inicio"}, {title:"Promociones", link:"#menu"}, {title:"Polaprints", link:"#gallery"}, {title:"Kit", link:"#contact"}, {title:"Imanes", link:"#location"}]
+!!!5
+%html{class:"no-js", lang:""}
+  %head
+    %meta{charset:"utf-8"}
+    %meta{:"http-equiv" => "x-ua-compatible", content:"ie=edge"}
+    %title Papelería Diseñarte
+    %meta{name:"description", content:"Papeleria Disenarte"}
+    %meta{name:"viewport", content:"width=device-width, initial-scale=1"}
+    %link{rel:"apple-touch-icon", href:"apple-touch-icon.png"}
+    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}/
+    %link{:href => "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css", :rel => "stylesheet"}/
+    %link{rel:"stylesheet", href:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"}
+    %link{rel:"stylesheet", href:"css/normalize.css"}
+    %link{rel:"stylesheet", href:"css/main.css"}
+    %link{rel:"stylesheet", href:"css/bootstrap-social.css"}
+    %link{href:'https://fonts.googleapis.com/css?family=Dancing+Script', rel:'stylesheet', type:'text/css'}
+    %link{href:"https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css", rel:"stylesheet"}
+    %script{src:"js/vendor/modernizr-2.8.3.min.js"}
+  %body
+    ="<!--[if lt IE 8]>"
+    %p{class:"browserupgrade"}
+      Estás usando un navegador
+      %strong desactualizado.
+      Por favor
+      %a{href:"http://browsehappy.com/"}
+        actualiza tu navegador
+      para una mejor experiencia
+    ="<![endif]-->"
+
+    .absolute.medium.black.large-padding.white-text#description-top
+      %ul.list-inline
+        -menu.each do |item|
+          %li
+            %a.white-text{href:item[:link]}= item[:title]
+
+
+    .container
+      %h3 hola mundo querido
+      
+    %footer.middle-xs.center-xs.up
+      %nav
+        %ul.list-inline.top-space--2
+          %li
+            %a{:href => "https://www.instagram.com/papeleriadsarte/", :target => "_blank"}
+              %i.fa.fa-instagram{:style => "font-size:48px;color:black"}  
+          %li
+            %a{:href => "https://www.facebook.com/papeleriadsarte/", :target => "_blank"}
+              %i.fa.fa-facebook-official{:style => "font-size:48px;color:blue"}
+          %li
+            %a{:href => "https://www.facebook.com/papeleriadsarte/", :target => "_blank"}
+              %i.fa.fa-pinterest{:style => "font-size:48px;color:red"}
+          %li
+            %a{:href => "https://api.whatsapp.com/send?phone=+54931303498", :target => "_blank"}
+              %i.fa.fa-whatsapp{:style => "font-size:48px;color:green"}
+
+    .container
+    %h3 
+    %hr/
+    .text-center.center-block
+      %strong.medium.lobster.top-space--2 Copyright Papelería Diseñarte 2017 - División Web
+      %p.txt-railway - Hacemos Desarrollos Web Personalizados - Todos los derechos reservados -
+      %a{:href => "http://tinyurl.com/tbvalid6", :target => "_blank"} Contacto Web
+      %br/
+    %hr/  
+
+
+
+    %script{src:"https://code.jquery.com/jquery-1.12.0.min.js"}
+    %script
+      window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')
+    %script{src:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"}
+    %script{src:"https://maps.googleapis.com/maps/api/js?key=AIzaSyAZw-hILO285jF31gCS_fzjU3e1pWE4etw&libraries=places"}
+    %script{src:"dist/user_location.js"}
+    %script{src:"dist/maps.js"}
+    %script{src:"dist/path.js"}
+    %script{src:"dist/main.js"}

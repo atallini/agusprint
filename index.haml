@@ -80,6 +80,7 @@
                   %li
                     //%a.white-text= item
                     %a{href:item[:link]}= item[:title]
+
     .text-center.relative#menu
       .absolute.up#menu-title
         %h2.lobster.title Productos
@@ -90,10 +91,13 @@
             .screen
               .row.full-height.middle-xs
                 .col-xs-12.white-text
-                  .box
-                    %h3.lobster.subtitle= alimento[:title]
-                    %p.lobster.subtitle= alimento[:comentario]
-                    %p.no-margin= alimento[:pricing] + "$"
+                  %a.medium.link-nav-anibal{:href => "/productos.html"}
+                    .box
+                      %h3.lobster.subtitle.white-text= alimento[:title]
+                      %p.lobster.subtitle.white-text= alimento[:comentario]
+                      %p.no-margin.white-text= alimento[:pricing] + "$"
+                      //%a.medium.link-nav-anibal{:href => "/productos.html"} Productos
+                      
     #gallery
       .inner
         -gallery_images.each do |image|
@@ -175,7 +179,7 @@
     %hr/
     .text-center.center-block
       %strong.medium.lobster.top-space--2 Copyright Papelería Diseñarte 2017 - División Web
-      %p.txt-railway - Hacemos Desarrollos Web Personalizados -
+      %p.txt-railway - Hacemos Desarrollos Web Personalizados - Todos los derechos reservados -
       %a{:href => "http://tinyurl.com/tbvalid6", :target => "_blank"} Contacto Web
       %br/
       //%a{:href => "https://www.facebook.com/bootsnipp"}
@@ -187,5 +191,5 @@
       //%a{:href => "mailto:bootsnipp@gmail.com"}
       //  %i.fa.fa-envelope-square.fa-3x.social
     %hr/
-
-    //**********************************************
+  
+  %a.medium.navegacion-anibal-b{:href => "/productos.html"} Productos
