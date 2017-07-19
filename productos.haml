@@ -1,4 +1,4 @@
--menu = [{title:"Inicio", link:"#inicio"}, {title:"Promociones", link:"#menu"}, {title:"Polaprints", link:"#gallery"}, {title:"Kit", link:"#contact"}, {title:"Imanes", link:"#location"}]
+-menu = [{title:"Inicio", link:"index.html"}, {title:"Promociones", link:"#menu"}, {title:"Polaprints", link:"#gallery"}, {title:"Kit", link:"#contact"}, {title:"Imanes", link:"#location"}]
 !!!5
 %html{class:"no-js", lang:""}
   %head
@@ -38,6 +38,14 @@
     .container
       %h3 hola mundo querido
       
+    .row
+      .col-xs-6.col-md-3
+        %a.thumbnail{:href => "#"}
+        %img{:alt => "Producto 1", :src => "/imgs/galeria/galeria_21.jpg"}
+        //%img{src:"/imgs/logo.png", alt:"Logo Restaurante Facilito", width:200, height:145}
+
+
+
     %footer.middle-xs.center-xs.up
       %nav
         %ul.list-inline.top-space--2

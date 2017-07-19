@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html class='no-js' lang=''>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='ie=edge' http-equiv='x-ua-compatible'>
+    <title>Papelería Diseñarte</title>
+    <meta content='Papeleria Disenarte' name='description'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <link href='apple-touch-icon.png' rel='apple-touch-icon'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+    <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' rel='stylesheet'>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='css/normalize.css' rel='stylesheet'>
+    <link href='css/main.css' rel='stylesheet'>
+    <link href='css/bootstrap-social.css' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+    <link href='https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css' rel='stylesheet'>
+    <script src='js/vendor/modernizr-2.8.3.min.js'></script>
+    <!-- / -->
+    <link href='https://www.w3schools.com/w3css/4/w3.css' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+    <style>
+      .w3-sidebar a {font-family: "Roboto", sans-serif}
+      body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+    </style>
+  </head>
+  <body class='w3-content' style='max-width:1200px'>
+    <!-- MENU LATERAL -->
+    <nav class='w3-sidebar w3-bar-block w3-white w3-collapse w3-top' id='mySidebar' style='z-index:3;width:250px'>
+      <div class='w3-container w3-display-container w3-padding-16'>
+        <i class='fa fa-remove w3-hide-large w3-button w3-display-topright' onclick='w3_close()'></i>
+        <h3 class='w3-wide'>
+          <b>Diseñarte</b>
+        </h3>
+      </div>
+      <div class='w3-padding-64 w3-large w3-text-grey' style='font-weight:bold'>
+        <a class='w3-bar-item w3-button' href='#'>Polaprints</a>
+        <a class='w3-bar-item w3-button' href='#'>Marcos</a>
+        <a class='w3-button w3-block w3-white w3-left-align' href='javascript:void(0)' id='myBtn' onclick='myAccFunc()'>
+          Ofertas Especiales
+          <i class='fa fa-caret-down'></i>
+        </a>
+        <div class='w3-bar-block w3-hide w3-padding-large w3-medium' id='demoAcc'>
+          <a class='w3-bar-item w3-button w3-light-grey' href='#'><i class='fa fa-caret-right w3-margin-right'></i>Opcion1
+          </a>
+          <a class='w3-bar-item w3-button' href='#'>Opcion2</a>
+          <a class='w3-bar-item w3-button' href='#'>Opcion3</a>
+          <a class='w3-bar-item w3-button' href='#'>Opcion4</a>
+        </div>
+        <a class='w3-bar-item w3-button' href='#'>Kits</a>
+        <a class='w3-bar-item w3-button' href='#'>Papeleria</a>
+        <a class='w3-bar-item w3-button' href='#'>Imanes</a>
+        <a class='w3-bar-item w3-button' href='#'>Fotografia</a>
+      </div>
+      <a class='w3-bar-item w3-button w3-padding' href='#footer'>Contacto</a>
+      <a class='w3-bar-item w3-button w3-padding' href='javascript:void(0)' onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a>
+      <a class='w3-bar-item w3-button w3-padding' href='#footer'>Subscribirse</a>
+    </nav>
+    <!-- / Top menu on small screens -->
+    <header class='w3-bar w3-top w3-hide-large w3-black w3-xlarge'>
+      <div class='w3-bar-item w3-padding-24 w3-wide'>DISENARTE</div>
+      <a class='w3-bar-item w3-button w3-padding-24 w3-right' href='javascript:void(0)' onclick='w3_open()'>
+        <i class='fa fa-bars'></i>
+      </a>
+    </header>
+    <!-- / Overlay effect when opening sidebar on small screens -->
+    <div class='w3-overlay w3-hide-large' id='myOverlay' onclick='w3_close()' style='cursor:pointer' title='close side menu'></div>
+    <!-- / CONTENIDO DE LA PAGINA -->
+    <div class='w3-main' style='margin-left:250px'>
+      <!-- Push down content on small screens -->
+      <div class='w3-hide-large' style='margin-top:83px'></div>
+      <!-- Top header -->
+      <header class='w3-container w3-xlarge'>
+        <p class='w3-left'>Todos los Productos</p>
+        <p class='w3-right'>
+          <i class='fa fa-shopping-cart w3-margin-right'></i>
+          <i class='fa fa-search'></i>
+        </p>
+      </header>
+      <!-- / IMAGEN DE CABECERA -->
+      <div class='w3-display-container w3-container'>
+        <img alt='Jeans' src='imgs/galeria/galeria_21.jpg' style='width:100%'>
+        <div class='w3-display-topleft w3-text-white' style='padding:24px 48px'>
+          <h1 class='w3-jumbo w3-hide-small'>Nueva Temporada</h1>
+          <h1 class='w3-hide-large w3-hide-medium'>Nueva Temporada</h1>
+          <h1 class='w3-hide-small'>COLECCION Julio 2017</h1>
+          <p>
+            <a class='w3-button w3-black w3-padding-large w3-large' href='#jeans'>COMPRE AHORA</a>
+          </p>
+        </div>
+      </div>
+      <div class='w3-container w3-text-grey' id='jeans'>
+        <p>8 items</p>
+      </div>
+      <!-- / GRILLA DE PRODUCTOS -->
+      <div class='w3-row w3-grayscale'>
+        <div class='w3-col l3 s6'>
+          <div class='w3-container'>
+            <img src='imgs/galeria/galeria_15.jpg' style='width:100%'>
+            <p>
+              Nombre producto 1
+              <br>
+              <b>$240.99</b>
+            </p>
+          </div>
+          <div class='w3-container'>
+            <img src='imgs/galeria/galeria_16.jpg' style='width:100%'>
+            <p>
+              Nombre producto 2
+              <br>
+              <b>$199.99</b>
+            </p>
+          </div>
+        </div>
+        <div class='w3-col l3 s6'>
+          <div class='w3-container'>
+            <div class='w3-display-container'>
+              <img src='imgs/galeria/galeria_17.jpg' style='width:100%'>
+              <span class='w3-tag w3-display-topleft'>Nuevo</span>
+              <div class='w3-display-middle w3-display-hover'>
+                <button class='w3-button'>
+                  Buy now
+                  <i class='fa fa-shopping-cart'></i>
+                </button>
+              </div>
+            </div>
+            <p>
+              Producto 3
+              <br>
+              <b>$19.99</b>
+            </p>
+          </div>
+          <div class='w3-container'>
+            <img src='imgs/galeria/galeria_18.jpg' style='width:100%'>
+            <p>
+              Producto 4
+              <br>
+              <b>$20.50</b>
+            </p>
+          </div>
+        </div>
+        <div class='w3-col l3 s6'>
+          <div class='w3-container'>
+            <img src='imgs/galeria/galeria_19.jpg' style='width:100%'>
+            <p>
+              Producto 5
+              <br>
+              <b>$20.50</b>
+            </p>
+          </div>
+          <div class='w3-container'>
+            <div class='w3-display-container'>
+              <img src='imgs/galeria/galeria_20.jpg' style='width:100%'>
+              <span class='w3-tag w3-display-topleft'>Sale</span>
+              <div class='w3-display-middle w3-display-hover'>
+                <button class='w3-button'>
+                  Buy now
+                  <i class='fa fa-shopping-cart'></i>
+                </button>
+              </div>
+            </div>
+            <p>
+              Producto 6
+              <br>
+              <b class='w3-text-red'>$14.99</b>
+            </p>
+          </div>
+        </div>
+        <div class='w3-col l3 s6'>
+          <div class='w3-container'>
+            <img src='imgs/galeria/galeria_21.jpg' style='width:100%'>
+            <p>
+              Producto 7
+              <br>
+              <b>$14.99</b>
+            </p>
+          </div>
+          <div class='w3-container'>
+            <img src='imgs/galeria/galeria_22.jpg' style='width:100%'>
+            <p>
+              Producto 8
+              <br>
+              <b>$24.99</b>
+            </p>
+          </div>
+        </div>
+        <!-- / PIE DE PAGINA -->
+        <footer class='w3-padding-64 w3-light-grey w3-small w3-center' id='footer'>
+          <div class='w3-row-padding w3-container'>
+            <h3></h3>
+            <br>
+            <hr>
+            <!-- /.w3-col.s4 -->
+            <!-- /  %hr/ -->
+            <!-- /  %h3 -->
+            <!-- /  %br/ -->
+            <!-- /  %hr/ -->
+            <div class='w3-col s4'>
+              <h4>Store</h4>
+              <p>
+                <i class='fa fa-fw fa-map-marker'></i>
+                Papelería Diseñarte
+              </p>
+              <p>
+                <i class='fa fa-fw fa-phone'></i>
+                +54-911-3455-9934
+              </p>
+              <p>
+                <i class='fa fa-fw fa-envelope'></i>
+                disenarte@gmail.com
+              </p>
+            </div>
+            <div class='w3-col s4'>
+              <h4>Forma de Pago</h4>
+              <p>
+                <i class='fa fa-fw fa-cc-amex'></i>
+                Mercado Pago
+              </p>
+              <p>
+                <i class='fa fa-fw fa-credit-card'></i>
+                Tarjeta de Credito
+              </p>
+              <br>
+              <i class='fa fa-facebook-official w3-hover-opacity w3-large'></i>
+              <i class='fa fa-instagram w3-hover-opacity w3-large'></i>
+              <i class='fa fa-snapchat w3-hover-opacity w3-large'></i>
+              <i class='fa fa-pinterest-p w3-hover-opacity w3-large'></i>
+              <!-- /%i.fa.fa-twitter.w3-hover-opacity.w3-large -->
+              <!-- /%i.fa.fa-linkedin.w3-hover-opacity.w3-large -->
+            </div>
+          </div>
+        </footer>
+        <div class='w3-black w3-center w3-padding-24'>
+          Desarrollado por Papelería Diseñarte - Todos los derechos reservados
+          <a class='w3-hover-opacity' href='https://www.w3schools.com/w3css/default.asp' target='_blank' title='W3.CSS'>w3.css</a>
+        </div>
+        <script>
+          // Accordion 
+          function myAccFunc() {
+              var x = document.getElementById("demoAcc");
+              if (x.className.indexOf("w3-show") == -1) {
+                  x.className += " w3-show";
+              } else {
+                  x.className = x.className.replace(" w3-show", "");
+              }
+          }
+          
+          // Click on the "Jeans" link on page load to open the accordion for demo purposes
+          document.getElementById("myBtn").click();
+          
+          
+          // Script to open and close sidebar
+          function w3_open() {
+              document.getElementById("mySidebar").style.display = "block";
+              document.getElementById("myOverlay").style.display = "block";
+          }
+           
+          function w3_close() {
+              document.getElementById("mySidebar").style.display = "none";
+              document.getElementById("myOverlay").style.display = "none";
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

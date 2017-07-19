@@ -1,0 +1,232 @@
+!!!5
+%html{class:"no-js", lang:""}
+  %head
+    %meta{charset:"utf-8"}
+    %meta{:"http-equiv" => "x-ua-compatible", content:"ie=edge"}
+    %title Papelería Diseñarte
+    %meta{name:"description", content:"Papeleria Disenarte"}
+    %meta{name:"viewport", content:"width=device-width, initial-scale=1"}
+    %link{rel:"apple-touch-icon", href:"apple-touch-icon.png"}
+    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}/
+    %link{:href => "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css", :rel => "stylesheet"}/
+    %link{rel:"stylesheet", href:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"}
+    %link{rel:"stylesheet", href:"css/normalize.css"}
+    %link{rel:"stylesheet", href:"css/main.css"}
+    %link{rel:"stylesheet", href:"css/bootstrap-social.css"}
+    %link{href:'https://fonts.googleapis.com/css?family=Dancing+Script', rel:'stylesheet', type:'text/css'}
+    %link{href:"https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css", rel:"stylesheet"}
+    %script{src:"js/vendor/modernizr-2.8.3.min.js"}
+    //
+    %link{:href => "https://www.w3schools.com/w3css/4/w3.css", :rel => "stylesheet"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Roboto", :rel => "stylesheet"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Montserrat", :rel => "stylesheet"}/
+    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}/
+    :css
+      .w3-sidebar a {font-family: "Roboto", sans-serif}
+      body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+  %body.w3-content{:style => "max-width:1200px"}
+
+    / MENU LATERAL
+    %nav#mySidebar.w3-sidebar.w3-bar-block.w3-white.w3-collapse.w3-top{:style => "z-index:3;width:250px"}
+      .w3-container.w3-display-container.w3-padding-16
+        %i.fa.fa-remove.w3-hide-large.w3-button.w3-display-topright{:onclick => "w3_close()"}
+        %h3.w3-wide
+          %b Diseñarte
+
+      .w3-padding-64.w3-large.w3-text-grey{:style => "font-weight:bold"}
+        %a.w3-bar-item.w3-button{:href => "#"} Polaprints
+        %a.w3-bar-item.w3-button{:href => "#"} Marcos
+        %a#myBtn.w3-button.w3-block.w3-white.w3-left-align{:href => "javascript:void(0)", :onclick => "myAccFunc()"}
+          Ofertas Especiales
+          %i.fa.fa-caret-down
+        #demoAcc.w3-bar-block.w3-hide.w3-padding-large.w3-medium
+          %a.w3-bar-item.w3-button.w3-light-grey{:href => "#"}
+            %i.fa.fa-caret-right.w3-margin-right>
+            Opcion1
+          %a.w3-bar-item.w3-button{:href => "#"} Opcion2
+          %a.w3-bar-item.w3-button{:href => "#"} Opcion3
+          %a.w3-bar-item.w3-button{:href => "#"} Opcion4
+        %a.w3-bar-item.w3-button{:href => "#"} Kits
+        %a.w3-bar-item.w3-button{:href => "#"} Papeleria
+        %a.w3-bar-item.w3-button{:href => "#"} Imanes
+        %a.w3-bar-item.w3-button{:href => "#"} Fotografia
+      %a.w3-bar-item.w3-button.w3-padding{:href => "#footer"} Contacto
+      %a.w3-bar-item.w3-button.w3-padding{:href => "javascript:void(0)", :onclick => "document.getElementById('newsletter').style.display='block'"} Newsletter
+      %a.w3-bar-item.w3-button.w3-padding{:href => "#footer"} Subscribirse
+
+    // Top menu on small screens
+    %header.w3-bar.w3-top.w3-hide-large.w3-black.w3-xlarge
+      .w3-bar-item.w3-padding-24.w3-wide DISENARTE
+      %a.w3-bar-item.w3-button.w3-padding-24.w3-right{:href => "javascript:void(0)", :onclick => "w3_open()"}
+        %i.fa.fa-bars
+
+    // Overlay effect when opening sidebar on small screens
+    #myOverlay.w3-overlay.w3-hide-large{:onclick => "w3_close()", :style => "cursor:pointer", :title => "close side menu"}
+
+
+    // CONTENIDO DE LA PAGINA
+    .w3-main{:style => "margin-left:250px"}
+      / Push down content on small screens
+      .w3-hide-large{:style => "margin-top:83px"}
+      / Top header
+      %header.w3-container.w3-xlarge
+        %p.w3-left Todos los Productos
+        %p.w3-right
+          %i.fa.fa-shopping-cart.w3-margin-right
+          %i.fa.fa-search
+
+      // IMAGEN DE CABECERA
+      .w3-display-container.w3-container
+        %img{:alt => "Jeans", :src => "imgs/galeria/galeria_21.jpg", :style => "width:100%"}/
+        .w3-display-topleft.w3-text-white{:style => "padding:24px 48px"}
+          %h1.w3-jumbo.w3-hide-small Nueva Temporada
+          %h1.w3-hide-large.w3-hide-medium Nueva Temporada
+          %h1.w3-hide-small COLECCION Julio 2017
+          %p
+            %a.w3-button.w3-black.w3-padding-large.w3-large{:href => "#jeans"} COMPRE AHORA
+      #jeans.w3-container.w3-text-grey
+        %p 8 items
+
+      // GRILLA DE PRODUCTOS
+      .w3-row.w3-grayscale
+
+        .w3-col.l3.s6
+          .w3-container
+            %img{:src => "imgs/galeria/galeria_15.jpg", :style => "width:100%"}/
+            %p
+              Nombre producto 1
+              %br/
+              %b $240.99
+          .w3-container
+            %img{:src => "imgs/galeria/galeria_16.jpg", :style => "width:100%"}/
+            %p
+              Nombre producto 2
+              %br/
+              %b $199.99
+
+        .w3-col.l3.s6
+          .w3-container
+            .w3-display-container
+              %img{:src => "imgs/galeria/galeria_17.jpg", :style => "width:100%"}/
+              %span.w3-tag.w3-display-topleft Nuevo
+              .w3-display-middle.w3-display-hover
+                %button.w3-button
+                  Buy now
+                  %i.fa.fa-shopping-cart
+            %p
+              Producto 3
+              %br/
+              %b $19.99
+          .w3-container
+            %img{:src => "imgs/galeria/galeria_18.jpg", :style => "width:100%"}/
+            %p
+              Producto 4
+              %br/
+              %b $20.50
+
+        .w3-col.l3.s6
+          .w3-container
+            %img{:src => "imgs/galeria/galeria_19.jpg", :style => "width:100%"}/
+            %p
+              Producto 5
+              %br/
+              %b $20.50
+          .w3-container
+            .w3-display-container
+              %img{:src => "imgs/galeria/galeria_20.jpg", :style => "width:100%"}/
+              %span.w3-tag.w3-display-topleft Sale
+              .w3-display-middle.w3-display-hover
+                %button.w3-button
+                  Buy now
+                  %i.fa.fa-shopping-cart
+            %p
+              Producto 6
+              %br/
+              %b.w3-text-red $14.99
+
+        .w3-col.l3.s6
+          .w3-container
+            %img{:src => "imgs/galeria/galeria_21.jpg", :style => "width:100%"}/
+            %p
+              Producto 7
+              %br/
+              %b $14.99
+          .w3-container
+            %img{:src => "imgs/galeria/galeria_22.jpg", :style => "width:100%"}/
+            %p
+              Producto 8
+              %br/
+              %b $24.99
+
+        // PIE DE PAGINA
+        %footer#footer.w3-padding-64.w3-light-grey.w3-small.w3-center
+          .w3-row-padding.w3-container
+            %h3
+            %br/
+            %hr/ 
+            //.w3-col.s4
+            //  %hr/
+            //  %h3
+            //  %br/
+            //  %hr/  
+
+            .w3-col.s4
+              %h4 Store
+              %p
+                %i.fa.fa-fw.fa-map-marker
+                Papelería Diseñarte
+              %p
+                %i.fa.fa-fw.fa-phone
+                +54-911-3455-9934
+              %p
+                %i.fa.fa-fw.fa-envelope
+                disenarte@gmail.com
+
+
+            .w3-col.s4
+              %h4 Forma de Pago
+              %p
+                %i.fa.fa-fw.fa-cc-amex
+                Mercado Pago
+              %p
+                %i.fa.fa-fw.fa-credit-card
+                Tarjeta de Credito
+              %br/
+              %i.fa.fa-facebook-official.w3-hover-opacity.w3-large
+              %i.fa.fa-instagram.w3-hover-opacity.w3-large
+              %i.fa.fa-snapchat.w3-hover-opacity.w3-large
+              %i.fa.fa-pinterest-p.w3-hover-opacity.w3-large
+              //%i.fa.fa-twitter.w3-hover-opacity.w3-large
+              //%i.fa.fa-linkedin.w3-hover-opacity.w3-large
+
+        .w3-black.w3-center.w3-padding-24
+          Desarrollado por Papelería Diseñarte - Todos los derechos reservados
+          %a.w3-hover-opacity{:href => "https://www.w3schools.com/w3css/default.asp", :target => "_blank", :title => "W3.CSS"} w3.css
+
+
+        :javascript
+          // Accordion 
+          function myAccFunc() {
+              var x = document.getElementById("demoAcc");
+              if (x.className.indexOf("w3-show") == -1) {
+                  x.className += " w3-show";
+              } else {
+                  x.className = x.className.replace(" w3-show", "");
+              }
+          }
+          
+          // Click on the "Jeans" link on page load to open the accordion for demo purposes
+          document.getElementById("myBtn").click();
+          
+          
+          // Script to open and close sidebar
+          function w3_open() {
+              document.getElementById("mySidebar").style.display = "block";
+              document.getElementById("myOverlay").style.display = "block";
+          }
+           
+          function w3_close() {
+              document.getElementById("mySidebar").style.display = "none";
+              document.getElementById("myOverlay").style.display = "none";
+          }
+
